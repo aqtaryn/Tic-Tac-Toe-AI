@@ -17,11 +17,22 @@ def take_move(data: array, player: int, move: int):
         data[move-1] = player
     return data
 
-def update():
-    """ Update data for game to use
-    Args: Data to update, Board(s) to update
-    Return: Updated Board(s) """
-    pass
+def update(data: array):
+    """ Makes visual board off of data
+    Args: Data to update
+    Return: New Visual Board """
+    # TODO Update better visual board
+
+    visual_board = []
+    for i in data:
+        if i == 1:
+            visual_board.append('X')
+        elif i == 2:
+            visual_board.append('O')
+        else:
+            visual_board.append('_')
+
+    return visual_board
 
 def win_check():
     # Only needs to be used 5 moves in
